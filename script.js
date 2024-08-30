@@ -37,26 +37,25 @@ ctx.fill();
 
 ctx.beginPath();
 
-// Define as coordenadas do retângulo e o tamanho
-const x = 200;      // Coordenada x do canto superior esquerdo
-const y = 150;      // Coordenada y do canto superior esquerdo
-const width = 280; // Largura do retângulo
-const height = 180; // Altura do retângulo
 
-// Desenha o retângulo
+const x = 200;     
+const y = 150;      
+const width = 280; 
+const height = 180; 
+
+
 ctx.rect(x, y, width, height);
 
-ctx.fillStyle = "#00FF00"; // Vermelho
-ctx.fill(); // Preenche o retângulo
+ctx.fillStyle = "#00FF00"; 
+ctx.fill(); 
 
 ctx.beginPath();
 
-// Define o centro e o tamanho do losango
+
 const centerX = 340;
 const centerY = 239;
-const size = 90; // Distância do centro até os vértices
+const size = 90; 
 
-// Calcula os quatro vértices do losango
 const topX = centerX;
 const topY = centerY - size;
 
@@ -69,18 +68,15 @@ const bottomY = centerY + size;
 const leftX = centerX - size;
 const leftY = centerY;
 
-// Desenha o losango
-ctx.moveTo(topX, topY); // Move para o vértice superior
-ctx.lineTo(rightX, rightY); // Linha para o vértice direito
-ctx.lineTo(bottomX, bottomY); // Linha para o vértice inferior
-ctx.lineTo(leftX, leftY); // Linha para o vértice esquerdo
-ctx.closePath(); // Fecha o caminho conectando ao vértice inicial
+ctx.moveTo(topX, topY); 
+ctx.lineTo(rightX, rightY); 
+ctx.lineTo(bottomX, bottomY); 
+ctx.lineTo(leftX, leftY); 
+ctx.closePath(); 
 
-// Define a cor de preenchimento
 ctx.fillStyle = "#FFFF00"; 
 ctx.fill(); 
 
-// Finaliza o caminho
 ctx.closePath();
 
 ctx.beginPath();
@@ -88,3 +84,33 @@ ctx.arc(340, 240, 50, 0, 2 * Math.PI);
 ctx.fillStyle = "#0000FF";
 ctx.fill();
 ctx.closePath();
+
+var canvas1 = document.getElementById("myCanvas1");
+var ctx1 = canvas1.getContext("2d");
+
+ctx1.beginPath();
+ctx1.arc(130, 250, 120, 0, 2 * Math.PI);
+ctx1.strokeStyle = "#000000";
+ctx1.lineWidth = 5;
+ctx1.stroke();
+ctx1.closePath();
+
+ctx1.beginPath();
+ctx1.arc(130, 250, 100, 0, 2 * Math.PI);
+ctx1.strokeStyle = "#000000";
+ctx1.lineWidth = 5;
+ctx1.stroke();
+ctx1.closePath();
+
+ctx1.beginPath();
+ctx1.arc(130, 250, 80, 0, 2 * Math.PI);
+ctx1.strokeStyle = "#000000";
+ctx1.lineWidth = 5;
+ctx1.stroke();
+ctx1.closePath();
+
+ctx1.beginPath();
+ctx1.arc(130, 250, 60, 0, 2 * Math.PI);
+ctx1.fillStyle = "#000";
+ctx1.fill();
+ctx1.closePath();
